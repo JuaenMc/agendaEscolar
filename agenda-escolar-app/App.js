@@ -161,6 +161,13 @@ export default function App() {
         title={editingId ? "Atualizar Tarefa" : "Adicionar Tarefa"}
         onPress={adicionarTarefa}
       />
+      {editingId && (
+        <Button
+          title="Cancelar Edição"
+          onPress={limparFormulario}
+          color="gray"
+        />
+      )}
 
       {/* Calendário Pop-up */}
       <Modal visible={calendarioVisivel} transparent={true} animationType="fade">
